@@ -3,10 +3,8 @@ package br.com.usuario.business;
 import br.com.usuario.business.converter.UsuarioConverter;
 import br.com.usuario.business.dto.UsuarioDTO;
 import br.com.usuario.infrastructure.entity.Usuario;
-import br.com.usuario.infrastructure.exceptions.ConflictException;
 import br.com.usuario.infrastructure.repository.UsuarioRepository;
 import lombok.RequiredArgsConstructor;
-import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 @Service
