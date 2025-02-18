@@ -44,5 +44,6 @@ public class UsuarioController {
     public ResponseEntity<Void> deletarUsuario(@PathVariable String email) {
         usuarioService.deletarPorEmail(email);
         return ResponseEntity.ok().build();
+
     }
 }
