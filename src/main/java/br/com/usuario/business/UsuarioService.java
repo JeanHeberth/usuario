@@ -26,7 +26,6 @@ public class UsuarioService {
     }
 
 
-
     public void emailExiste(String email) {
         try {
             boolean emailExistente = verificaEmailExistente(email);
@@ -41,5 +40,18 @@ public class UsuarioService {
 
     public boolean verificaEmailExistente(String email) {
         return usuarioRepository.existsByEmail(email);
+    }
+
+    public Usuario buscarPorEmail(String email) {
+        return usuarioRepository.findByEmail(email)
+                .orElseThrow(() -> new RuntimeException("Usuário nao encontrado: " + email));
+    }
+
+    public void deletarPorEmail(String email) {
+        try {
+            usuarioRepository.deleteByEmail(email);
+        } catch (Exception e) {
+            throw new RuntimeException("Usuário nao encontrado: " + email);
+        }
     }
 }
