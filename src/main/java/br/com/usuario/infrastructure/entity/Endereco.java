@@ -20,7 +20,7 @@ public class Endereco {
     private String rua;
     @Column(name = "numero")
     private Long numero;
-    @Column(name = "complemento", length = 10)
+    @Column(name = "complemento", length = 50)
     private String complemento;
     @Column(name = "cidade", length = 150)
     private String cidade;
@@ -28,6 +28,8 @@ public class Endereco {
     private String estado;
     @Column(name = "cep", length = 9)
     private String cep;
+    @Column(name = "usuario_id")
+    private Long usuario_id;
 
 
 
