@@ -10,7 +10,7 @@ import lombok.*;
 @Builder
 public class EnderecoDTO {
 
-    //testes
+    private Long id;
     private String rua;
     private Long numero;
     private String complemento;
